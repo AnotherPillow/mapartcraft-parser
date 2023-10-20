@@ -1,0 +1,14 @@
+{
+    "name": "mapartcraft-parser",
+    "version": "1.0.0",
+    "description": "A 2D .nbt schematic parser, designed for maparts outputted by rebane2001's mapartcraft.",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "AnotherPillow",
+    "license": "MIT",
+    "dependencies": {
+        "prismarine-nbt": "^2.2.1"
+    }
+}

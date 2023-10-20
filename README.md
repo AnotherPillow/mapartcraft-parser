@@ -2,6 +2,9 @@
 
 A 2D .nbt schematic parser, designed for maparts outputted by rebane2001's mapartcraft
 
+[See this project on npm.](https://www.npmjs.com/package/mapartcraft-parser)
+[See this project on github.](https://github.com/anotherPillow/mapartcraft-parser)
+
 ## usage
 
 1. `npm i mapartcraft-parser`

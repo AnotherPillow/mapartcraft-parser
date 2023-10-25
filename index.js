@@ -38,14 +38,19 @@ exports.parser = async (path) => {
     })
     returnData.palette = _palette
 
+    let ys = []
     const _blocks = parsed.value.blocks.value.value.map(x => {
+        ys.push(x.pos.value.value[1])
         return {
             position: x.pos.value.value,
             block: _palette[x.state.value]
         }
     })/*.filter(x => x.position[1] === yCoord)*/ /* .splice(1000) */
+    
 
     // console.log(_blocks)
+
+    returnData.isFlat = ys.filter(x=>x===2).length === ys.length;
 
     returnData.blocks = _blocks
     returnData.simplify = () => {

@@ -1,6 +1,6 @@
 {
     "name": "mapartcraft-parser",
-    "version": "1.0.1",
+    "version": "1.1.0",
     "description": "A 2D .nbt schematic parser, designed for maparts outputted by rebane2001's mapartcraft.",
     "main": "index.js",
     "scripts": {

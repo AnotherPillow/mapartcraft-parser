@@ -34,7 +34,9 @@ exports.parser = async (path) => {
 
     const _palette = {}
     parsed.value.palette.value.value.forEach((elm, index) => {
-        _palette[index] = elm.Name.value
+        const v = elm.Name.value
+        if (v !== 'minecraft:air') 
+            _palette[index] = v
     })
     returnData.palette = _palette
 
@@ -45,7 +47,7 @@ exports.parser = async (path) => {
             position: x.pos.value.value,
             block: _palette[x.state.value]
         }
-    })/*.filter(x => x.position[1] === yCoord)*/ /* .splice(1000) */
+    }).filter(x => x.block !== 'minecraft:air' && x.block !== undefined)
     
 
     // console.log(_blocks)
@@ -66,7 +68,6 @@ exports.parser = async (path) => {
                     block: x.block
                 }
             })
-            .filter(a => a.block !== 'minecraft:air')
     }
     // console.log(parsed.value.palette.value.value)
 

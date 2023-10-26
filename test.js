@@ -2,6 +2,6 @@ const { parser } = require('./index');
 
 (async () => {
     const data = await parser('red_sbicon.nbt')
-    console.log(data)
-    // console.log(data.simplify())
+    console.log(data.blocks[0].position)
+    console.log(data.simplify(false))
 })()

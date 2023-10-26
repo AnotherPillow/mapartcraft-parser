@@ -53,14 +53,20 @@ exports.parser = async (path) => {
     returnData.isFlat = ys.filter(x=>x===2).length === ys.length;
 
     returnData.blocks = _blocks
-    returnData.simplify = () => {
-        return structuredClone(returnData.blocks).map(x => {
-            return {
-                x: x.position[0],
-                z: x.position[2],
-                block: x.block
-            }
-        })
+    returnData.simplify = (yCoord = false) => {
+        let condition = (n) => typeof yCoord === typeof 0 ? n == yCoord : true
+        
+
+        return structuredClone(returnData.blocks)
+            .filter(a => condition(a.position[1]))
+            .map(x => {
+                return {
+                    x: x.position[0],
+                    z: x.position[2],
+                    block: x.block
+                }
+            })
+            .filter(a => a.block !== 'minecraft:air')
     }
     // console.log(parsed.value.palette.value.value)
 

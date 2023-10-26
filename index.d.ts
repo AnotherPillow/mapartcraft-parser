@@ -10,9 +10,10 @@ export const parser = function (path: string, yCoord: number | null = 1): Promis
         block: string
     }[],
     isFlat: boolean
-    simplify: function(): {
+    simplify: (yCoord?: number | null | boolean) => {
         x: number,
         z: number,
         block: string
     }[]
+    
 }>{}

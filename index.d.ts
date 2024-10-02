@@ -1,4 +1,4 @@
-export const parser = function (path: string, yCoord: number | null = 1): Promise<{
+export const parser = function (path: string, yCoord: number | null): Promise<{
     bounds: [number, number],
     palette: {
         [key: string]: string
@@ -16,4 +16,4 @@ export const parser = function (path: string, yCoord: number | null = 1): Promis
         block: string
     }[]
     
-}>{}
+}>

@@ -18,4 +18,4 @@ export interface ParsedSchematic {
     
 }
 
-export const parser = (path: string, yCoord: number | null) => Promise<ParsedSchematic>
+export function parser(path: string, yCoord?: number | null): Promise<ParsedSchematic>

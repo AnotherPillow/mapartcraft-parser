@@ -1,14 +1,16 @@
+export interface Block {
+    position: [
+        number, number, number
+    ],
+    block: string
+}
+
 export interface ParsedSchematic {
     bounds: [number, number],
     palette: {
         [key: string]: string
     },
-    blocks: {
-        position: [
-            number, number, number
-        ],
-        block: string
-    }[],
+    blocks: Block[],
     isFlat: boolean
     simplify: (yCoord?: number | null | boolean) => {
         x: number,

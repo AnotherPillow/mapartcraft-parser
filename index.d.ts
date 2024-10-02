@@ -1,4 +1,4 @@
-export const parser = function (path: string, yCoord: number | null): Promise<{
+export interface ParsedSchematic {
     bounds: [number, number],
     palette: {
         [key: string]: string
@@ -16,4 +16,6 @@ export const parser = function (path: string, yCoord: number | null): Promise<{
         block: string
     }[]
     
-}>
+}
+
+export const parser = (path: string, yCoord: number | null) => Promise<ParsedSchematic>
